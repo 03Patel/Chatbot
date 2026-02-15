@@ -16,7 +16,9 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api", chatRoutes);
-
+app.get('/test', (req, res) => {
+  res.send(`Your Groq key is hidden, but works on server!`);
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
