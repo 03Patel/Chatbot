@@ -3,6 +3,7 @@ const Chat = require("../models/Chat");
 
 
 const MODEL_NAME = "openai/gpt-oss-20b";
+const GROQ_API_KEY="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";
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 exports.sendMessage = async (req, res) => {
@@ -25,7 +26,7 @@ exports.sendMessage = async (req, res) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+          Authorization: `Bearer ${GROQ_API_KEY}`,
           "Content-Type": "application/json"
         },
       }
