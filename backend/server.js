@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect("mongodb+srv://ganeshjipatel108_db_user:MKC3rkydGp6YfuLG@cluster0.4jxroaa.mongodb.net/?appName=Cluster0)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
